@@ -1,6 +1,6 @@
 -- ===============================================
 -- =             QUALITY CHECKS                  =
--- =         bronze.crm_cust_info Table          =
+-- =         silver.crm_cust_info Table          =
 -- ===============================================
 
 -- Check for NULLs or Duplicates in Primary Key
@@ -24,7 +24,7 @@ FROM silver.crm_cust_info;
 
 -- ===============================================
 -- =             QUALITY CHECKS                  =
--- =         bronze.crm_prd_info Table           =
+-- =         silver.crm_prd_info Table           =
 -- ===============================================
 
 -- Check For Duplicates or NULLs Primary Key 
@@ -59,7 +59,7 @@ WHERE prd_end_dt < prd_start_dt ;
  
 -- ===============================================
 -- =             QUALITY CHECKS                  =
--- =       bronze.crm_sales_details Table        =
+-- =       silver.crm_sales_details Table        =
 -- ===============================================
 
 -- Check Invalid Dates in Bronze Table
@@ -107,7 +107,7 @@ ORDER BY  sls_sales ,
 
 -- ===============================================
 -- =             QUALITY CHECKS                  =
--- =         bronze.erp_cust_az12 Table          =
+-- =         silver.erp_cust_az12 Table          =
 -- ===============================================
 
 -- Identify Out-Of-Range Dates
@@ -131,7 +131,7 @@ WHERE gen NOT IN ('Female' , 'Male') ;
 
 -- ===============================================
 -- =             QUALITY CHECKS                  =
--- =         bronze.erp_loc_a101 Table           =
+-- =         silver.erp_loc_a101 Table           =
 -- ===============================================
 
 -- Data Standardization & Consistency 
@@ -146,7 +146,7 @@ FROM silver.erp_loc_a101 ;
 
 -- ===============================================
 -- =             QUALITY CHECKS                  =
--- =         bronze.erp_px_cat_g1v2 Table           =
+-- =         silver.erp_px_cat_g1v2 Table           =
 -- ===============================================
 
 -- Check for unwanted spaces
