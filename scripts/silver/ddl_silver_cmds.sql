@@ -1,6 +1,31 @@
--- This script creates tables in the 'silver' schema after dropping them if they already exist.
--- These tables are used to store raw or initial data ingested from sources (files csv)
--- Add MetaData Columns (dwh_create_date)
+/*
+-------------------------------------------------------------------------------------
+-- Script: Silver Layer Tables Creation
+-- Description:
+--   This script creates the foundational tables in the Silver layer of the data warehouse.
+--   These tables store cleaned, structured, and integrated data from various source systems.
+--
+--   Steps:
+--   - Drop each table if it already exists using IF OBJECT_ID + DROP TABLE.
+--   - Recreate each table with clearly defined columns and appropriate data types.
+--   - Include a technical metadata column `dwh_create_date` with default value as GETDATE().
+--
+-- Tables Created:
+--   • silver.crm_cust_info       : Customer master data from CRM system.
+--   • silver.crm_prd_info        : Product master data from CRM with categorization.
+--   • silver.crm_sales_details   : Sales transactions including product and customer references.
+--   • silver.erp_cust_az12       : Additional customer info from ERP (birthdate, gender).
+--   • silver.erp_loc_a101        : Customer location data from ERP (country).
+--   • silver.erp_px_cat_g1v2     : Product category hierarchy and maintenance info.
+--
+-- Purpose:
+--   These Silver layer tables act as an intermediate storage zone where data is:
+--     ✓ Standardized
+--     ✓ De-duplicated
+--     ✓ Enriched
+--   before being transformed into the Gold layer for analytics and reporting.
+-------------------------------------------------------------------------------------
+*/
 
 IF OBJECT_ID('silver.crm_cust_info' , 'U') IS NOT NULL 
 	DROP TABLE silver.crm_cust_info ;
