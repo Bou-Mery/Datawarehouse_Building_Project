@@ -58,22 +58,21 @@ This project is an excellent showcase for:
 
 ### 🔸 Medallion Architecture
 
-![DW Architecture](./dw_architecture.drawio.png)
-
-### 🔌 Integration Model (CRM + ERP)
-
-![Integration Model](./IntegrationModel.drawio.png)
-
-### 🌟 Star Schema (Sales Data Mart)
-
-![Star Schema](./starSchema.drawio.png)
-
+![Image](https://github.com/user-attachments/assets/0639ce41-3374-41d4-83ee-87e9743037a2)
 
 ### 🔄 Data Flow: End-to-End ETL Process
 
-![Data Flow - Medallion Architecture](./dw_architecture.drawio.png)
+![Image](https://github.com/user-attachments/assets/a0fef474-94c4-4d87-af22-ab154d5fd854)
 
- 
+### 🔌 Integration Model (CRM + ERP)
+
+![Image](https://github.com/user-attachments/assets/1b6c30b2-906b-4b3e-8d43-87a2a510c323)
+
+### 🌟 Star Schema (Sales Data Mart)
+
+![Image](https://github.com/user-attachments/assets/b0f3ef26-062e-4f9f-b8dd-eed620912c38)
+
+
 
 ---
 
