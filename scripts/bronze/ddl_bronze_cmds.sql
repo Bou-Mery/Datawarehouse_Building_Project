@@ -1,5 +1,31 @@
--- This script creates tables in the 'bronze' schema after dropping them if they already exist.
--- These tables are used to store raw or initial data ingested from sources (files csv)
+/*
+-------------------------------------------------------------------------------------
+-- Script: Bronze Layer Tables Creation
+-- Description:
+--   This script creates the source tables in the Bronze layer of the data warehouse.
+--   The Bronze layer stores raw, untransformed data extracted from operational systems.
+--
+--   Steps:
+--   - Drop each table if it already exists using IF OBJECT_ID + DROP TABLE.
+--   - Recreate each table with the appropriate structure and data types to match source feeds.
+--
+-- Tables Created:
+--   • bronze.crm_cust_info       : Raw customer data from CRM source system.
+--   • bronze.crm_prd_info        : Raw product data from CRM system.
+--   • bronze.crm_sales_details   : Raw transactional sales data (dates stored as integers).
+--   • bronze.erp_cust_az12       : Additional customer attributes from ERP (birthdate, gender).
+--   • bronze.erp_loc_a101        : Customer location data from ERP (country information).
+--   • bronze.erp_px_cat_g1v2     : Product category and maintenance information from ERP.
+--
+-- Purpose:
+--   These Bronze tables act as the **landing zone** for raw, unprocessed data before any cleansing,
+--   enrichment, or transformation. They serve as the base input for the Silver layer processing.
+--
+-- Notes:
+--   • No constraints or business rules are applied at this stage to retain source fidelity.
+-------------------------------------------------------------------------------------
+*/
+
 
 IF OBJECT_ID('bronze.crm_cust_info' , 'U') IS NOT NULL 
 	DROP TABLE bronze.crm_cust_info ;
