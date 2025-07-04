@@ -1,3 +1,27 @@
+/*
+-------------------------------------------------------------------------------------
+-- Script: Gold Layer Views Creation
+-- Description:
+--   This script creates three views in the Gold layer of the data warehouse:
+--   1. gold.dim_customers   : Customer dimension enriched with demographic data.
+--   2. gold.dim_products    : Product dimension with active product details and categories.
+--   3. gold.fact_sales      : Sales fact table linking customer and product dimensions.
+--
+--   Steps:
+--   - If the view already exists, it is dropped using IF OBJECT_ID + DROP VIEW.
+--   - Each view is then recreated using data from the Silver layer.
+--
+-- Key Features:
+--   • Surrogate keys are generated using ROW_NUMBER().
+--   • Data enrichment through LEFT JOINs with supporting tables (CRM, ERP, LOC, etc.).
+--   • Data cleansing using CASE and COALESCE to ensure completeness.
+--   • Filtering of historical/inactive records for products (WHERE prd_end_dt IS NULL).
+--
+-- Notes:
+--   • Views are named following the convention: gold.<dimension/fact name>
+--   • These views are used for analytics, dashboards, and business reporting.
+-------------------------------------------------------------------------------------
+*/
 
 
 IF OBJECT_ID('gold.dim_customer ') IS NOT NULL	
