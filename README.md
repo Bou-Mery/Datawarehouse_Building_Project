@@ -89,7 +89,7 @@ This project is an excellent showcase for:
 
 ## 🔗 Project Planning
 
-🗂️ [📋 Click here to open the Notion Project Plan](https://www.notion.so/Data-Warehouse-Project-2227f509c30f80cc9e49ce84dc568204?source=copy_link)
+[<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" width="20" /> Click here to open the Notion Project Plan](https://www.notion.so/Data-Warehouse-Project-2227f509c30f80cc9e49ce84dc568204?source=copy_link)
 
 Includes:
 - 📆 Progress
