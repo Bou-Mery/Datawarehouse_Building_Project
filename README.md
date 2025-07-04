@@ -34,10 +34,10 @@ This project is an excellent showcase for:
 
 | Folder/File | Description |
 |-------------|-------------|
+| `scripts/`  | SQL scripts used for ETL, DDL, and transformations |
 | `bronze/`   | Raw data tables from CRM & ERP (.csv ingested) |
 | `silver/`   | Cleaned and standardized tables |
 | `gold/`     | Final business-ready views with star schema |
-| `scripts/`  | SQL scripts used for ETL, DDL, and transformations |
 | `docs/` | Data architecture and model diagrams |
 | `README.md` | Documentation (you are here!) |
 
@@ -92,10 +92,9 @@ This project is an excellent showcase for:
 🗂️ [📋 Click here to open the Notion Project Plan](https://www.notion.so/Data-Warehouse-Project-2227f509c30f80cc9e49ce84dc568204?source=copy_link)
 
 Includes:
-- ✅ Task List by Layer (Bronze, Silver, Gold)
 - 📆 Progress
-- 📁 Dataset overview
-- 📌 Notes & deliverables
+- ✅ Task List by Layer (Bronze, Silver, Gold)
+
 
 ---
 
@@ -120,7 +119,9 @@ You are free to use, modify, and share this work with proper attribution.
 
 **Meryem BOUKHRAIS**  
 _Data Engineering & Analytics Enthusiast_  
-[LinkedIn](https://www.linkedin.com/in/boukhrais-meryem-053501252/) | [GitHub](https://github.com/Bou-Mery) |
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&style=flat-square)](https://www.linkedin.com/in/boukhrais-meryem-053501252/)  
+[![GitHub](https://img.shields.io/badge/GitHub-black?logo=github&style=flat-square)](https://github.com/Bou-Mery)
 
 ---
 
